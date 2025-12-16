@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
   discordId: String,
   username: String,
@@ -20,3 +21,5 @@ const userSchema = new mongoose.Schema({
     read: Date
   }
 });
+
+export default mongoose.model("User", userSchema);
